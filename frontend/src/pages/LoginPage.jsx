@@ -23,13 +23,16 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://voice-cloning-m4f1.onrender.com/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
